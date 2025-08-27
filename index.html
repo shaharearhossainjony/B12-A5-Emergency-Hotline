@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Hotline</title>
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body>
+    <header>
+        <!-- heaqder nav -->
+        <navbar class="flex justify-between items-center mx-auto mt-5">
+            <!-- nav left -->
+            <div class="nav-left  flex  items-center ml-5 ">
+                <div class="image">
+                    <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="">
+                </div>
+                <div class="text ml-3">
+                    <p class="text-[#006747] font-bold text-[15px] " >Emergency</p>
+                    <p class="text-[#006747] font-bold text-[15px] " >Service</p>
+                </div>
+            </div>
+
+            <!-- nav right -->
+             <div class="flex items-center" >
+                <!-- love div -->
+                 <div class=" flex items-center mr-8">
+                    <h class="mr-3 font-bold" >0</h>
+                    <img class=" w-[30px] h-[30px]" src="./assets/heart.png" alt="">
+                 </div>
+
+                 <!-- coin div -->
+                   <div class=" flex items-center mr-8">
+                    <h class="mr-3 font-bold" >100</h>
+                    <img class=" w-[30px] h-[30px]" src="./assets/coin.png" alt="">
+                 </div>
+                 <!-- copy counter -->
+                  <div class=" mr-8">
+                    <button class=" p-3 text-white font-bold bg-[#00A63E] border-none rounded-full"><span>2</span> <span>Copy</span></button>
+                  </div>
+
+
+             </div>
+        </navbar>
+
+        <!-- header hero -->
+         <div class="bg-gradient-to-r from-[#013223] to-[#013223] my-[50px] p-[32px]">
+            <img class="mx-auto " src="./assets/logo.png" alt="">
+            <h1 class=" text-center font-bold text-white text-[40px]">Emergency Service Directory</h1>
+            <p class="text-white text-center font-bold " >Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+         </div>
+
+    </header>
     
 </body>
 </html>
