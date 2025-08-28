@@ -1,4 +1,4 @@
-    // copy counter element
+// copy counter and alert 
 const counter = document.getElementById("copy-counter");
 let count = 0;
 const copyButtons = document.querySelectorAll(".copy-btn");
@@ -9,8 +9,11 @@ copyButtons.forEach((button) => {
     const card = button.closest(".card");
     const serviceNumber = card.querySelector(".service-number").innerText;
     navigator.clipboard.writeText(serviceNumber);
+
+    alert("Number copied: " + serviceNumber);
   });
 });
+
 
 // heart counter 
 const loveCounter = document.getElementById("loveCounter");
@@ -53,7 +56,7 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
 
       document.querySelector(".for-history-cards").appendChild(historyItem);
     } else {
-      alert("Not enough coins to make a call!");
+      alert("❌ Not enough coins to make a call!");
       return;
     }
   });
