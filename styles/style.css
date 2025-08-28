@@ -1,0 +1,43 @@
+@media only screen and (max-width: 425px) {
+     navbar{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+     }
+     .nav-left .nav-right{
+        margin: 20px auto;
+     }
+     
+    .hero{
+        flex-direction:column;
+        height:fit-content;
+    }
+    
+    .hero-image img{
+        height:100px;
+        width:100px;
+    }
+    .hero h1{
+        font-size:26px;
+    }
+    .hero p{
+        font-size:10px;
+
+    }
+
+ main{
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .allcards-section{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        height:auto;
+    }
+    .call-history-main{
+        width:400px;
+    }
+
+}
