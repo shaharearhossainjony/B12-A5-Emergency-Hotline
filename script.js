@@ -22,4 +22,40 @@ const loveCounter = document.getElementById("loveCounter");
         loveCounter.textContent = loveCount;
       });
     });
+// coin counter and call history
+const coinCounter = document.getElementById("coin-counter");
+
+document.querySelectorAll(".call-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    let currentCoins = parseInt(coinCounter.innerText);
+    if (currentCoins >= 20) {
+      const card = btn.closest(".card");
+      const serviceName = card.querySelector(".service-name").innerText;
+      const serviceNumber = card.querySelector(".service-number").innerText;
+
+      alert(`📞 Calling ${serviceName} ${serviceNumber}`);
+      coinCounter.innerText = currentCoins - 20;
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+
+      const historyItem = document.createElement("div");
+      historyItem.className =
+        "bg-[#FAFAFA] flex justify-between items-center m-3 p-3 rounded";
+      historyItem.innerHTML = `
+        <div>
+          <h1 class="font-bold">${serviceName}</h1>
+          <p>${serviceNumber}</p>
+        </div>
+        <div>
+          <p>${timeString}</p>
+        </div>
+      `;
+
+      document.querySelector(".for-history-cards").appendChild(historyItem);
+    } else {
+      alert("Not enough coins to make a call!");
+      return;
+    }
+  });
+});
 
