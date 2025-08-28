@@ -12,4 +12,14 @@ copyButtons.forEach((button) => {
   });
 });
 
+// heart counter 
+const loveCounter = document.getElementById("loveCounter");
+    let loveCount = 0;
+    const loveButtons = document.querySelectorAll(".love-btn");
+    loveButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        loveCount++;
+        loveCounter.textContent = loveCount;
+      });
+    });
 
