@@ -59,3 +59,7 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
   });
 });
 
+// clear call history
+document.getElementById("clearBtn").addEventListener("click", function () {
+  document.querySelector(".for-history-cards").innerHTML = "";
+});
